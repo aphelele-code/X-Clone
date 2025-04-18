@@ -61,11 +61,7 @@ html, body{
         color: rgb(83, 100, 113);
         flex-shrink: 0;
 
-        
-       
-       
-    
-    }
+        }
     
     .under-post p{
         margin: 0;
@@ -82,6 +78,14 @@ html, body{
         flex-direction: row;
         align-items: center;
         cursor: pointer;
+    }
+
+    .sidebar{
+        overflow-y: scroll;
+    }
+
+    .recommendations{
+        width: 100%;
     }
     
   }
