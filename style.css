@@ -12,7 +12,7 @@ html, body{
     box-sizing: border-box;
 
 }
-
+/*THIS INCLUDES ALL 3 SECTIONS: SIDEBAR, TWEETS AND RECCOMENDATIONS*/
 .main-container{
     display: flex;
      height: 100vh;
@@ -24,7 +24,7 @@ html, body{
 .logo{
     margin-bottom: 0.938rem;
 }
-
+/*THIS IS ONLY INCLUSIVE OF THE TWEETS AND RECCOMENDATIONS*/
 .content{
     display: flex;
     flex-direction: row;
@@ -61,11 +61,7 @@ html, body{
         color: rgb(83, 100, 113);
         flex-shrink: 0;
 
-        
-       
-       
-    
-    }
+        }
     
     .under-post p{
         margin: 0;
@@ -73,9 +69,7 @@ html, body{
         color: rgb(83, 100, 113);
     }
 
-    .hidden-button{
-        display: none;
-    }
+    
 
     .tweets .actual-post p{
         display: flex;
@@ -83,8 +77,57 @@ html, body{
         align-items: center;
         cursor: pointer;
     }
+
+    .sidebar{
+        overflow-y: scroll;
+    }
+
+    .recommendations{
+        width: 100%;
+    }
     
   }
+
+  @media (max-width: 1120px){
+    .sidebar li p{
+        display: none;
+    }
+
+    .sidebar li svg{
+        padding: 0.75rem;
+    }
+
+    
+
+    
+    .hidden-button{
+        background-color: black;
+width: 50px;
+height: 50px;
+border-radius: 100%;
+}
+    
+       .hidden-button svg{
+        fill: currentColor;
+       height: 24px;
+        width: 24px;
+        margin-left: 5px;
+        
+       
+       }
+
+       .post-button{
+        display: none;
+       }
+  }
+
+  @media (min-width:1121px){
+    .hidden-button{
+        display: none;
+    }
+  }
+
+
 
 @media (max-width: 768px) {
 
@@ -122,12 +165,7 @@ html, body{
    display: block;
  }
 
-   /* video{
-   width: 100%;
-    margin-top: 0.313rem;
-    margin-left: 3.125rem;
-    border-radius: 0.625rem;
-}  */
+  
 
    .recommendations{
 display: none;
@@ -153,6 +191,7 @@ display: none;
         border-top: 1px solid #eff3f4;
        overflow-x: scroll;
        z-index: 1000;
+       margin: 0;
     }
 
     
@@ -163,22 +202,6 @@ display: none;
         
     
 
-    .hidden-button{
-        background-color: black;
-        outline: none;
-width: 50px;
-height: 50px;
-border-radius: 100%;
-}
-    
-       .hidden-button svg{
-        fill: currentColor;
-       height: 24px;
-        width: 24px;
-        margin-left: 5px;
-        
-       
-       }
 
        .profile-pic{
         width: 36px;
@@ -217,11 +240,6 @@ border-radius: 100%;
     padding: 0.75rem;
 }
 
-
-
-.sidebar ul{
-    margin: 0;
-   }
     
    .tweets .posts{
     padding: 0;
@@ -267,9 +285,9 @@ border-radius: 100%;
 }
 
        
-    }
-
     
+
+    /*THESE ARE ALL THE ACTIONS UNDER THE ACTUAL POST*/
 
 .tweets .under-post p:nth-of-type(1):hover{
 color: #1DA1F2;
@@ -481,6 +499,8 @@ svg{
     flex-shrink: 0;
 }
 
+/*THIS IS THE VERY TOP PART OF THE TWEETS SECTION*/
+
 .top{
     display: flex;
     flex-direction: column;
@@ -523,6 +543,8 @@ svg{
     position: relative;
    
   }
+
+  /*THIS IS THE RECTANGULAR IMAGE IN THE TWEETS SECTION*/
   
   .banner img {
     width: 100%;
@@ -531,6 +553,8 @@ svg{
     display: block;
 
   }
+
+  /*THIS IS THE CIRCULAR IMAGE IN THE TWEETS SECTION*/
   
   .profile-picture {
     position: absolute;
@@ -552,7 +576,7 @@ svg{
   }
 
 
-
+/*THIS IS THE "EDIT PROFILE" BUTTON*/
   .user button{
     margin-top: 0.5rem;
    margin-left: 70%;
@@ -679,6 +703,8 @@ text-decoration:1px solid underline;
     margin-right: 0.188rem;
     margin-bottom: 1rem;
 }
+
+/*THIS IS THE POSTS, REPLIES, HIGHLIGHTS, MEDIA , ETC. SECTION*/
 
 
 .headings ul{
@@ -952,6 +978,7 @@ font-size:0.938rem;
     text-decoration: underline;
 }
 
+/*"YOU MIGHT LIKE" SECTION*/
 .masterchef, .gordon, .tems{
     width: 5.313rem;
     height: 2rem;
@@ -989,7 +1016,7 @@ font-size:0.938rem;
     margin: 0.938rem 0 1.25rem 0.938rem;
     font-size: 1.25rem;
 }
-
+/* "WHAT'S HAPPENING SECTION"*/
 .happening{
     margin: 0.938rem 0;
     border: 1px solid #eff3f4;
